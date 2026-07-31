@@ -24,7 +24,7 @@ const varFile string = "test.tfvars"
 // TODO: Add support for other cloud configurations
 const azEnvironment string = "AZUREPUBLICCLOUD"
 
-func TestDnsZoneRecords(t *testing.T, ctx types.TestContext) {
+func TestComposableDnsZoneRecords(t *testing.T, ctx types.TestContext) {
 	subscriptionID := os.Getenv("ARM_SUBSCRIPTION_ID")
 	if subscriptionID == "" {
 		t.Fatalf("ARM_SUBSCRIPTION_ID must be set for acceptance tests")
