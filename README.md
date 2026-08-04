@@ -77,7 +77,7 @@ No modules.
 ## Resources
 
 | Name | Type |
-|------|---------|
+|------|------|
 | [azurerm_dns_a_record.a_record](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/dns_a_record) | resource |
 | [azurerm_dns_cname_record.cname_record](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/dns_cname_record) | resource |
 | [azurerm_dns_ns_record.ns_record](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/dns_ns_record) | resource |
@@ -95,7 +95,7 @@ No modules.
 ## Outputs
 
 | Name | Description |
-|------|---------|
+|------|-------------|
 | <a name="output_a_record_fqdns"></a> [a\_record\_fqdns](#output\_a\_record\_fqdns) | The FQDNs of the DNS A Records. |
 | <a name="output_a_record_ids"></a> [a\_record\_ids](#output\_a\_record\_ids) | The DNS A Record IDs. |
 | <a name="output_cname_record_fqdns"></a> [cname\_record\_fqdns](#output\_cname\_record\_fqdns) | The FQDNs of the DNS CNAME Records. |
