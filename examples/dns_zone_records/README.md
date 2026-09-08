@@ -2,14 +2,14 @@
 ## Requirements
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.3 |
 | <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~> 3.77 |
 
 ## Modules
 
 | Name | Source | Version |
-|------|--------|---------|
+| ---- | ------ | ------- |
 | <a name="module_dns_records"></a> [dns\_records](#module\_dns\_records) | ../.. | n/a |
 | <a name="module_public_dns_zone"></a> [public\_dns\_zone](#module\_public\_dns\_zone) | terraform.registry.launch.nttdata.com/module_primitive/dns_zone/azurerm | ~> 1.0 |
 | <a name="module_resource_group"></a> [resource\_group](#module\_resource\_group) | terraform.registry.launch.nttdata.com/module_primitive/resource_group/azurerm | ~> 1.0 |
@@ -22,7 +22,7 @@ No resources.
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_a_records"></a> [a\_records](#input\_a\_records) | A map of A records to create | <pre>map(object({<br/>    ttl                = number<br/>    records            = list(string)<br/>    target_resource_id = optional(string)<br/>    tags               = optional(map(string))<br/>  }))</pre> | `{}` | no |
 | <a name="input_cname_records"></a> [cname\_records](#input\_cname\_records) | A map of CNAME records to create | <pre>map(object({<br/>    ttl                = number<br/>    record             = optional(string)<br/>    target_resource_id = optional(string)<br/>    tags               = optional(map(string))<br/>  }))</pre> | `{}` | no |
 | <a name="input_domain_names"></a> [domain\_names](#input\_domain\_names) | A list of domain names to create | `list(string)` | `[]` | no |
@@ -40,7 +40,7 @@ No resources.
 ## Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_a_record_fqdns"></a> [a\_record\_fqdns](#output\_a\_record\_fqdns) | The FQDNs of the DNS A Records. |
 | <a name="output_a_record_ids"></a> [a\_record\_ids](#output\_a\_record\_ids) | The DNS A Record IDs. |
 | <a name="output_cname_record_fqdns"></a> [cname\_record\_fqdns](#output\_cname\_record\_fqdns) | The FQDNs of the DNS CNAME Records. |
