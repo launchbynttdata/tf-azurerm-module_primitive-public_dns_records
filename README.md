@@ -66,7 +66,7 @@ Shared configuration and workflow files are largely managed through [launch-terr
 ## Requirements
 
 | Name | Version |
-| ---- | ------- |
+|------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.3 |
 | <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~> 3.77 |
 
@@ -77,7 +77,7 @@ No modules.
 ## Resources
 
 | Name | Type |
-| ---- | ---- |
+|------|------|
 | [azurerm_dns_a_record.a_record](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/dns_a_record) | resource |
 | [azurerm_dns_cname_record.cname_record](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/dns_cname_record) | resource |
 | [azurerm_dns_ns_record.ns_record](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/dns_ns_record) | resource |
@@ -86,7 +86,7 @@ No modules.
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-| ---- | ----------- | ---- | ------- | :------: |
+|------|-------------|------|---------|:--------:|
 | <a name="input_a_records"></a> [a\_records](#input\_a\_records) | A list of A records to create | <pre>map(object({<br/>    name                = string<br/>    resource_group_name = string<br/>    zone_name           = string<br/>    ttl                 = number<br/>    records             = list(string)<br/>    target_resource_id  = optional(string)<br/>    tags                = optional(map(string))<br/>  }))</pre> | `{}` | no |
 | <a name="input_cname_records"></a> [cname\_records](#input\_cname\_records) | A list of A records to create | <pre>map(object({<br/>    name                = string<br/>    resource_group_name = string<br/>    zone_name           = string<br/>    ttl                 = number<br/>    record              = optional(string)<br/>    target_resource_id  = optional(string)<br/>    tags                = optional(map(string))<br/>  }))</pre> | `{}` | no |
 | <a name="input_ns_records"></a> [ns\_records](#input\_ns\_records) | A list of A records to create | <pre>map(object({<br/>    name                = string<br/>    resource_group_name = string<br/>    zone_name           = string<br/>    ttl                 = number<br/>    records             = list(string)<br/>    tags                = optional(map(string))<br/>  }))</pre> | `{}` | no |
@@ -95,7 +95,7 @@ No modules.
 ## Outputs
 
 | Name | Description |
-| ---- | ----------- |
+|------|-------------|
 | <a name="output_a_record_fqdns"></a> [a\_record\_fqdns](#output\_a\_record\_fqdns) | The FQDNs of the DNS A Records. |
 | <a name="output_a_record_ids"></a> [a\_record\_ids](#output\_a\_record\_ids) | The DNS A Record IDs. |
 | <a name="output_cname_record_fqdns"></a> [cname\_record\_fqdns](#output\_cname\_record\_fqdns) | The FQDNs of the DNS CNAME Records. |
