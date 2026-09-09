@@ -1,3 +1,6 @@
+instance_env      = 0
+instance_resource = 1
+
 domain_names = ["launchexample.nttdata.com"]
 a_records = {
   "first" = {
