@@ -59,10 +59,10 @@ func checkDNSZoneRecordSets(t *testing.T, dnsZoneRecordSetsClient *armdns.Record
 }
 
 func checkRecord(t *testing.T, dnsZoneRecordSetsClient *armdns.RecordSetsClient, terraformOptions *terraform.Options, recordSetIdsKey string, recordSetFQDNsKey string, recordType armdns.RecordType) {
-	resourceGroupName := terraform.Output(t, terraformOptions, "resource_group_name")
-	zoneNames := terraform.OutputList(t, terraformOptions, "public_dns_zone_names")
-	recordSetIds := terraform.OutputMap(t, terraformOptions, recordSetIdsKey)
-	recordSetFQDNs := terraform.OutputMap(t, terraformOptions, recordSetFQDNsKey)
+	resourceGroupName := terraform.OutputContext(t, context.Background(), terraformOptions, "resource_group_name")
+	zoneNames := terraform.OutputListContext(t, context.Background(), terraformOptions, "public_dns_zone_names")
+	recordSetIds := terraform.OutputMapContext(t, context.Background(), terraformOptions, recordSetIdsKey)
+	recordSetFQDNs := terraform.OutputMapContext(t, context.Background(), terraformOptions, recordSetFQDNsKey)
 	options := armdns.RecordSetsClientGetOptions{}
 
 	for _, zoneName := range zoneNames {
